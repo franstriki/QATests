@@ -9,17 +9,16 @@ pipeline {
             }
         }
 
+
         stage('2. Instalar Dependencias') {
             steps {
-                // Crea un entorno virtual e instala las librerías (para Windows usa 'bat', para Linux usa 'sh')
                 bat '''
-                    python -m venv venv
+                    "C:\Users\franc\AppData\Local\Programs\Python\Python313\python.exe" -m venv venv
                     call venv\\Scripts\\activate
                     pip install -r requirements.txt
                 '''
             }
         }
-
         stage('3. Ejecutar Pruebas QA') {
             steps {
                 // Ejecuta Pytest y genera un reporte HTML
