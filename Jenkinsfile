@@ -13,7 +13,7 @@ pipeline {
         stage('2. Instalar Dependencias') {
             steps {
                 bat '''
-                    "C:\Users\franc\AppData\Local\Programs\Python\Python313\python.exe" -m venv venv
+                    "C:\\Users\\franc\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv venv
                     call venv\\Scripts\\activate
                     pip install -r requirements.txt
                 '''
